@@ -399,6 +399,7 @@ bool OpenTherm::isValidRequest(unsigned long request)
 void OpenTherm::end()
 {
     detachInterrupt(digitalPinToInterrupt(inPin));
+    digitalWrite(outPin, LOW);
 }
 
 OpenTherm::~OpenTherm()
