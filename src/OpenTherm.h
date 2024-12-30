@@ -173,7 +173,7 @@ public:
     void begin(std::function<void(unsigned long, OpenThermResponseStatus)> processResponseFunction);
 #endif
     bool isReady();
-    unsigned long sendRequest(unsigned long request);
+    virtual unsigned long sendRequest(unsigned long request);
     bool sendResponse(unsigned long request);
     bool sendRequestAsync(unsigned long request);
     [[deprecated("Use OpenTherm::sendRequestAsync(unsigned long) instead")]]
