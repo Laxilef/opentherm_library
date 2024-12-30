@@ -226,7 +226,7 @@ public:
     float getPressure();
     unsigned char getFault();
 
-private:
+protected:
     const int inPin;
     const int outPin;
     const bool isSlave;
