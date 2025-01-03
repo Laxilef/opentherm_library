@@ -400,6 +400,11 @@ void OpenTherm::end()
 {
     detachInterrupt(digitalPinToInterrupt(inPin));
     digitalWrite(outPin, LOW);
+
+    status = OpenThermStatus::NOT_INITIALIZED;
+    response = 0;
+    responseStatus = OpenThermResponseStatus::NONE;
+    responseTimestamp = 0;
 }
 
 OpenTherm::~OpenTherm()
